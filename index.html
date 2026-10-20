@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="uz" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduIT — Interaktiv IT Platformasi</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-body text-body">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg border-bottom sticky-top shadow-sm bg-body-tertiary py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary fs-3" href="#">
+                <i class="fa-solid fa-code me-2"></i>EduIT
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-3">
+                    <li class="nav-item"><a class="nav-link active fw-medium" href="#hero" data-i18n="nav_home">Bosh sahifa</a></li>
+                    <li class="nav-item"><a class="nav-link fw-medium" href="#features" data-i18n="nav_features">Imkoniyatlar</a></li>
+                    <li class="nav-item"><a class="nav-link fw-medium" href="#about" data-i18n="nav_about">Loyiha haqida</a></li>
+                    
+                    <!-- Language Selector -->
+                    <li class="nav-item dropdown ms-lg-2">
+                        <button class="btn btn-outline-secondary btn-sm dropdown-toggle rounded-pill px-3" type="button" id="langDropdown" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-globe me-1"></i> <span id="current-lang">UZ</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow">
+                            <li><a class="dropdown-item lang-select" href="#" data-lang="uz">O'zbekcha (UZ)</a></li>
+                            <li><a class="dropdown-item lang-select" href="#" data-lang="ru">Русский (RU)</a></li>
+                            <li><a class="dropdown-item lang-select" href="#" data-lang="en">English (EN)</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Theme Switcher -->
+                    <li class="nav-item">
+                        <button class="btn btn-sm btn-outline-warning rounded-circle p-2" id="theme-toggle" title="Mavzuni o'zgartirish">
+                            <i class="fa-solid fa-sun" id="theme-icon"></i>
+                        </button>
+                    </li>
+
+                    <!-- Login Button -->
+                    <li class="nav-item ms-lg-2">
+                        <button class="btn btn-primary btn-sm px-4 rounded-pill fw-bold shadow-sm" data-bs-toggle="modal" data-bs-target="#loginModal" data-i18n="btn_login">
+                            <i class="fa-solid fa-right-to-bracket me-1"></i> Kirish
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section text-center py-5 my-4 fade-in-up">
+        <div class="container py-4">
+            <span class="badge bg-primary bg-gradient px-3 py-2 rounded-pill mb-3 fs-6 shadow-sm" data-i18n="hero_badge">
+                Viloyat IT-Yetakchisi Loyihasi — 2026
+            </span>
+            <h1 class="display-3 fw-extrabold mb-3 text-gradient" data-i18n="hero_title">
+                Maktab O'quvchilari Uchun Interaktiv IT Platformasi
+            </h1>
+            <p class="lead mx-auto text-secondary mb-4 style-max-width fs-4" data-i18n="hero_desc">
+                Noutbuk va smartfondan erkin foydalanish orqali raqamli ko'nikmalarni rivojlantirish hamda amaliy dasturlash muhiti.
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <button class="btn btn-primary btn-lg px-4 rounded-pill shadow" data-bs-toggle="modal" data-bs-target="#loginModal" data-i18n="hero_start">
+                    <i class="fa-solid fa-rocket me-2"></i>Boshlash
+                </button>
+                <a href="#features" class="btn btn-outline-secondary btn-lg px-4 rounded-pill" data-i18n="hero_more">
+                    Batafsil
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-body-tertiary fade-in-up">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold display-5" data-i18n="features_title">Platforma Imkoniyatlari</h2>
+                <p class="text-secondary lead fs-5" data-i18n="features_subtitle">Amaliy dasturlash va gamifikatsiya ekotizimi</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow p-4 text-center feature-card rounded-4">
+                        <div class="icon-box bg-primary bg-opacity-10 text-primary mb-3 mx-auto rounded-circle">
+                            <i class="fa-solid fa-laptop-code fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3" data-i18n="feat1_title">Interaktiv Kodlash</h4>
+                        <p class="text-secondary fs-6" data-i18n="feat1_desc">Dasturni o'rnatmasdan, brauzerda HTML, CSS va JS topshiriqlarini bajarish.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow p-4 text-center feature-card rounded-4">
+                        <div class="icon-box bg-success bg-opacity-10 text-success mb-3 mx-auto rounded-circle">
+                            <i class="fa-solid fa-trophy fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3" data-i18n="feat2_title">Reyting Tizimi</h4>
+                        <p class="text-secondary fs-6" data-i18n="feat2_desc">Sinf va maktablar o'rtasida ballar hamda sovrinlar bo'yicha jonli musobaqa muhiti.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow p-4 text-center feature-card rounded-4">
+                        <div class="icon-box bg-info bg-opacity-10 text-info mb-3 mx-auto rounded-circle">
+                            <i class="fa-brands fa-telegram fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3" data-i18n="feat3_title">Mini App Integratsiya</h4>
+                        <p class="text-secondary fs-6" data-i18n="feat3_desc">Telegram Mini App orqali smartfondan testlar yechish va darslarni kuzatish.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 fade-in-up">
+        <div class="container py-4">
+            <div class="card border-0 shadow-lg bg-gradient p-4 p-md-5 rounded-4 text-center border-start border-primary border-4">
+                <h3 class="fw-bold mb-3 text-primary" data-i18n="about_title">Loyiha Muallifi</h3>
+                <p class="fs-4 text-body fw-semibold mb-2" data-i18n="author_name">Ulug'bekov Muhammadnofiy Bobirmirzo o'g'li</p>
+                <p class="text-secondary fs-5 mb-0" data-i18n="author_info">1-maktab, 8-'G' sinf o'quvchisi | Axborot Texnologiyalari Yo'nalishi</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center border-top bg-body-tertiary">
+        <div class="container">
+            <p class="mb-0 text-secondary">&copy; 2026 EduIT — Ulug'bekov Muhammadnofiy. Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 shadow-lg border-0">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold fs-4" data-i18n="modal_title">Platformaga Kirish</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label class="form-label text-secondary fw-semibold" data-i18n="label_username">Foydalanuvchi nomi / Login</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                                <input type="text" class="form-control" id="loginUsername" required placeholder="muhammadnofiy">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-secondary fw-semibold" data-i18n="label_password">Parol</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                                <input type="password" class="form-control" id="loginPassword" required placeholder="••••••••">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="rememberMe">
+                                <label class="form-check-label text-secondary small" for="rememberMe" data-i18n="remember_me">Eslab qolish</label>
+                            </div>
+                            <a href="#" class="text-primary text-decoration-none small" data-i18n="forgot_pass">Parolni unutdingizmi?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 rounded-pill py-2 fw-bold" data-i18n="btn_submit">
+                            Kirish
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap & Custom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
